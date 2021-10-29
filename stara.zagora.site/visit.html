@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Stara Zagora</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel=stylesheet type="text/css" href="1.css">
+  </head>
+<body>
+	<main>
+<header>Stara Zagora</header>
+<div class="navbar">
+  <a href="index.html">Home</a> 
+  <a href="history.html">History and geographical location</a> 
+  <a href="visit.html">Visit</a>
+</div>
+<div class="row">
+<div class="col-sm-7">
+<h1 style="text-align: center;">Why go to Stara Zagora?</h1>
+<p style="text-align: center;background-color: #f18973;">Stara Zagora is actually one of the most underestimated cities for tourists in Bulgaria. Everyone know that it is a nice city for living but few people go there for tourism. 
+However, there are plenty of interesting and important places to visit. It’s a shame that I go to some of them very rarely but while working on this article, I visited each one of them and I can say that they are absolutely 
+worth the attention.Stara Zagora is one of the world's oldest cities. Because the city has been through several cataclysms throughout history and has been burned to the ground numerous times, this is not readily apparent now. 
+My earliest recollections, on the other hand, include playing on ancient Roman and Byzantine ruins. There are still historic stones with carvings and inscriptions in the yard of my school. And where there used to be an old 
+Roman street, there is now a stunning modern history museum building with the Roman street restored at the lowest level.</p>
+</div>
+<div class="col-sm-5">
+<div class="mySlides"><img src="opera.png" style="width:700px;height: 600px;display: block;margin-left: auto;margin-right: auto"></div>
+<div class="mySlides"><img src="guardians.png" style="width:700px;height: 600px;display: block;margin-left: auto;margin-right: auto"></div>
+<div class="mySlides"><img src="zagorka.png" style="width:700px;height: 600px;display: block;margin-left: auto;margin-right: auto"></div>
+<div class="mySlides"><img src="romanstreets.png" style="width:700px;height: 600px;display: block;margin-left: auto;margin-right: auto"></div>
+<div class="mySlides"><img src="museum.png" style="width:700px;height: 600px;display: block;margin-left: auto;margin-right: auto"></div>
+<div class="mySlides"><img src="mosque.png" style="width:700px;height: 600px;display: block;margin-left: auto;margin-right: auto"></div>
+<div class="mySlides"><img src="ayazmo.png" style="width:700px;height: 600px;display: block;margin-left: auto;margin-right: auto"></div>
+<div class="mySlides"><img src="neolithical.png" style="width:700px;height: 600px;display: block;margin-left: auto;margin-right: auto"></div>
+<div class="mySlides"><img src="fountains.png" style="width:700px;height: 600px;display: block;margin-left: auto;margin-right: auto"></div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+ <a class="next" onclick="plusSlides(1)">❯</a>
+ <div class="caption-container">   <p id="caption"></p> </div>
+<div class="row">
+<div class="column"><img class="demo cursor" src="opera.png" style="width:100%" onclick="currentSlide(1)" alt="The opera house in Stara Zagora, Bulgaria"> </div>
+ <div class="column"><img class="demo cursor" src="romanforum.png" style="width:100%" onclick="currentSlide(2)" alt="The Roman Forum"></div>
+ <div class="column"><img class="demo cursor" src="guardians.png" style="width:100%" onclick="currentSlide(3)" alt="Memorial Complex the Guardians of Stara Zagora 1877"> </div>
+ <div class="column"><img class="demo cursor" src="zagorka.png" style="width:100%" onclick="currentSlide(4)" alt="The artificial lake Zagorka in Park Bedechka"></div>
+ <div class="column"> <img class="demo cursor" src="romanstreets.png" style="width:100%" onclick="currentSlide(5)" alt="The Roman street in Stara Zagora"></div>    
+ <div class="column"><img class="demo cursor" src="museum.png" style="width:100%" onclick="currentSlide(6)" alt="The History Museum"></div>
+ <div class="column"><img class="demo cursor" src="mosque.png" style="width:100%" onclick="currentSlide(7)" alt="The building of the Museum of Religions in Stara Zagora – a former mosque"></div>
+ <div class="column"><img class="demo cursor" src="ayazmo.png" style="width:100%" onclick="currentSlide(8)" alt="Ayazmoto Park"></div>
+ <div class="column"><img class="demo cursor" src="neolithical.png" style="width:100%" onclick="currentSlide(9)" alt="Remains of a Neolithic house in the Neolithic Dwellings Museum"></div>
+<div class="column"><img class="demo cursor" src="fountains.png" style="width:100%" onclick="currentSlide(10)" alt="The fountains in front of Stara Zagora Municipality building"></div>
+  </div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) { showSlides(slideIndex += n);}
+function currentSlide(n) { showSlides(slideIndex = n);}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script><br>
+<div style="background-color:black;color:white;text-align: center;">All the information, photos and their titles are from Andrey Andreev's <a class="f1" href="https://www.andrey-andreev.com/en/stara-zagora-bulgaria/">website</a>.</div>
+</p>
+</main>
+</body>
+</html>
